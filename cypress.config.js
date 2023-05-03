@@ -6,6 +6,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       on('file:preprocessor',cucumber())
     },
+    baseUrl : "https://opensource-demo.orangehrmlive.com",
     specPattern: "cypress/e2e/**/*.feature",
+   
   },
+  
 });
