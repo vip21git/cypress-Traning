@@ -26,6 +26,10 @@ Add this to package.json  outside the devDependencies
   }
 
 
+Command to create allure report - 
+npx cypress run --spec "cypress/integration/.js" --env allure=true,allureResultsPath=cypress/allure-results
 
+to server allure report - 
+allure serve .\cypress\allure_results\    
 
 
