@@ -1,6 +1,8 @@
 import loginPage from '../pageObject/loginPage'
 import { Given, When } from "cypress-cucumber-preprocessor/steps";
 
+//Added POM
+
 Given("User redirects to application", ()=>{
     loginPage.navigateToUrl()
 })
