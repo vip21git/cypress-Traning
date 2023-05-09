@@ -11,5 +11,7 @@ module.exports = defineConfig({
     },
     baseUrl : "https://opensource-demo.orangehrmlive.com",
     specPattern: "cypress/e2e/**/*.feature",
+   
   },
+  
 });
