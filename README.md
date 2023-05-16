@@ -30,6 +30,6 @@ Command to create allure report -
 npx cypress run --spec "cypress/integration/.js" --env allure=true,allureResultsPath=cypress/allure-results
 
 to server allure report - 
-allure serve .\cypress\allure_results\    
+allure serve cypress\allure-results    
 
 
