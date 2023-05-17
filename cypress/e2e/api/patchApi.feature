@@ -1,11 +1,11 @@
+Feature: PATCH API Endpoint Functionality Scenarios
 
-Feature: Rest API PATCH Endpoint Functionality Scenarios
+Scenario Outline: Verification of updated job title in the list
 
- Scenario Outline: Update a new user with Specific data
+Given PATCH API Method to update job Titles
+Then Verify "<job>" title is updated in the list
 
-    Given the user is on the Home page of Website for Patch API
-    Then the response should contain the following updated job "<job>" in the list
-    Examples:
+Examples:
       | job              |
       | QaTester         |
       | QaTester1        |
@@ -15,4 +15,6 @@ Feature: Rest API PATCH Endpoint Functionality Scenarios
       | QaTester5        |
       | QaTester6        |
       | QaTester7        |
+      | QaTester8        |
+      
       

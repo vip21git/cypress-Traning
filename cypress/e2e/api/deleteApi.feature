@@ -1,20 +1,10 @@
-Feature: Rest API DELETE Endpoint Functionality Scenarios
+Feature:DELETE API Endpoint Functionality Scenarios
 
- Scenario Outline: Delete a new user with valid data
+Scenario Outline: Verification for deleting user via API
 
-    Given the user is on the Home page of Website for Delete API
-    Then the response should not contain the following updated "<name>" in the list
-    Examples:
-      | name                |
-      | Janet               |
+Given DELETE Method API to Delete User
+Then Verify the "<name>" should not be present in the updated list
 
-
-
-
-
-
-
-
-
-
-#
+Examples:
+      | name  |
+      | Janet |

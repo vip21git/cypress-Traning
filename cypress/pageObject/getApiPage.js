@@ -8,8 +8,8 @@ export default {
         }).as('response');
     },
 
-    verifyResponseofGetRequest(responseMessage) {
-        cy.get('@response').its('status').should("equal", parseInt(responseMessage))
+    verifyResponseofGetRequest(statusCode) {
+        cy.get('@response').its('status').should("equal", parseInt(statusCode))
     },
     verifyUsernameInResponse(firstname) {
         cy.get('@response').its('body.data[1].first_name').should("equal", firstname)

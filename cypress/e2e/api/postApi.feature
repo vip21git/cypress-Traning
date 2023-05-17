@@ -1,10 +1,11 @@
-Feature: Rest API POST Endpoint Functionality Scenarios
+Feature:POST API Endpoint Functionality Scenarios
 
- Scenario Outline: Create a new user with valid data
+Scenario Outline: Verification of creating user via api
 
-    Given the user is on the Home page
-    Then the response should contain the following "<email>" in the list
-    Examples:
+Given POST API Method to create user
+Then Verify the repsonse should have "<email>" in the list
+
+Examples:
       | email               |
       | eve.holt@reqres.in  |
       | eve1.holt@reqres.in |

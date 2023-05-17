@@ -1,13 +1,17 @@
-Feature: SignIn into OHRM
+Feature: Login Functionality
 
 Scenario: User login to application with valid credentials
 Given User redirects to application
-When User enter "Admin" and "admin123"
+When User enter credentials to Login
+    |user_name  | password  |
+    |Admin      | admin123  |
 And User click on Login Button
-Then User able to login successfully
+Then User should be able to login successfully
 
 Scenario: User login to application with invalid credentials
 Given User redirects to application
-When User enter "User" and "123admin"
+When User enter credentials to Login
+    |user_name  | password  |
+    |Admin      | admin1234  |
 And User click on Login Button
-Then User should be not able to login
+Then User should not be able to login

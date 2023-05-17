@@ -1,8 +1,10 @@
-Feature: Rest API PUT Endpoint Functionality Scenarios
+Feature: PUT API Endpoint Functionality Scenarios
 
- Scenario Outline: Update a new user with valid data
-    Given the user is on the Home page of Website
-    Then the response should contain the following updated "<name>" in the list
+Scenario Outline: Verification for updating the user data
+
+Given PUT API Method to update user name
+Then Verify "<name>" should be updated in the list
+   
     Examples:
       | name                |
       | NewUserName         |

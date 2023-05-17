@@ -1,4 +1,4 @@
-import dashboardPage from "../pageObject/dashboardPage";
+import dashboardPage from "../../pageObject/dashboardPage";
 import { And } from "cypress-cucumber-preprocessor/steps";
 
 And("User click on My Info", ()=>{
@@ -6,7 +6,11 @@ And("User click on My Info", ()=>{
 })
 And("User edit the personal application details", ()=>{
     dashboardPage.updateDetails()
+   
 })
 And("User sign out from application", ()=>{
     dashboardPage.signOut()
+})
+Then("Verify details updated successfully",()=>{
+    dashboardPage.verifyToastMessage()
 })
