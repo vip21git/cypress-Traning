@@ -1,21 +1,16 @@
-import loginPage from '../../pageObject/loginPage'
-import { Given, When } from "cypress-cucumber-preprocessor/steps";
-
-//Added POM
+import loginPage from '../../pageObject/web/loginPage'
+import { Given,When,And,Then } from "cypress-cucumber-preprocessor/steps";
 
 Given("User redirects to application", ()=>{
     loginPage.navigateToUrl()
 })
 
-When("User enter credentials to Login", (datatable)=>{
-    datatable.hashes().forEach((element) => {
-    loginPage.enterUserDetails(element.user_name,element.password)
-});
-
+When("User {string} and {string} credentials to Login", (user_name,password)=>{
+    loginPage.enterUserDetails(user_name,password)
 })
 
 And("User click on Login Button", ()=>{
-   loginPage.clickLoginBtn()
+   loginPage.clickOnLoginButton()
 })
 
 Then("User should be able to login successfully", ()=>{

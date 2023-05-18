@@ -1,9 +1,9 @@
-Feature:POST API Endpoint Functionality Scenarios
+Feature:POST API Endpoint Functionality
 
 Scenario Outline: Verification of creating user via api
 
-Given POST API Method to create user
-Then Verify the repsonse should have "<email>" in the list
+Given POST Method to create user
+Then Verify that repsonse should have "<email>" in the list
 
 Examples:
       | email               |

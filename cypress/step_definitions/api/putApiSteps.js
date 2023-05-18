@@ -1,11 +1,11 @@
-import putApiPage from "../../pageObject/putApiPage";
-import { Given, Then } from "cypress-cucumber-preprocessor/steps";
+import putApiPage from "../../pageObject/api/putApiPage";
+import { Given,Then } from "cypress-cucumber-preprocessor/steps";
 
 
-Given("PUT API Method to update user name",()=>{
+Given("PUT Method to update user name",()=>{
     putApiPage.putRequest()
 })
 
 Then("Verify {string} should be updated in the list",(username)=>{
-    putApiPage.verifyUserName(username)
+    putApiPage.verifyUserNameInResponse(username)
 })

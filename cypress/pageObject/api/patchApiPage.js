@@ -4,7 +4,7 @@ export default {
       cy.fixture('patchData').then((bodyData) => {
          cy.request({
              method: 'PATCH',
-             url: Cypress.config('apiMethodUrl'),
+             url: Cypress.env('patchApiUrl'),
              body: bodyData
          }).as('response')
      })

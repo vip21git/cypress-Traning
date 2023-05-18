@@ -1,10 +1,10 @@
-import postApiPage from "../../pageObject/postApiPage";
+import postApiPage from "../../pageObject/api/postApiPage";
 import { Given, Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("POST API Method to create user", () => {
+Given("POST Method to create user", () => {
     postApiPage.postRequest()
 })
 
-Then("Verify the repsonse should have {string} in the list", (expectedEmail) => {
+Then("Verify that repsonse should have {string} in the list", (expectedEmail) => {
     postApiPage.verifyEmailInResponse(expectedEmail)
 })

@@ -3,16 +3,16 @@ export default {
         cy.fixture('putData').then((bodyData) => {
             cy.request({
                 method: 'PUT',
-                url: Cypress.config('apiMethodUrl'),
+                url: Cypress.env('putApiUrl'),
                 body: bodyData
             }).as('response')
         })
     },
     
-    verifyUserName(username) {
+    verifyUserNameInResponse(expectedUsername) {
         cy.get('@response').then((value) => {
             let actualUsername = JSON.stringify(value)
-            expect(actualUsername).to.include(username)
+            expect(actualUsername).to.include(expectedUsername)
         })
     }
 

@@ -1,8 +1,8 @@
-Feature: PATCH API Endpoint Functionality Scenarios
+Feature: PATCH API Endpoint Functionality
 
 Scenario Outline: Verification of updated job title in the list
 
-Given PATCH API Method to update job Titles
+Given PATCH Method to update job Titles
 Then Verify "<job>" title is updated in the list
 
 Examples:

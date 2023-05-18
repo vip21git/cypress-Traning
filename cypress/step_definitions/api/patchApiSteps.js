@@ -1,7 +1,7 @@
-import patchApiPage from "../../pageObject/patchApiPage";
-import { Given, Then } from "cypress-cucumber-preprocessor/steps";
+import patchApiPage from "../../pageObject/api/patchApiPage";
+import { Given,Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("PATCH API Method to update job Titles",()=>{
+Given("PATCH Method to update job Titles",()=>{
     patchApiPage.patchRequest()
 })
 

@@ -1,8 +1,8 @@
-Feature: GET API Endpoint Functionality Scenarios
+Feature: GET API Endpoint Functionality
 
 Scenario Outline: Verification of status code
 
-Given GET API Method to send request for "<url>"
+Given GET Method to send request for "<url>"
 Then Verify "<statusCode>" of API
 Examples:
       | url                                | statusCode |
@@ -12,7 +12,7 @@ Examples:
       | https://reqres.in/api/unknown/23   | 404        |
 
 Scenario Outline:  Verification of fetching user name via api
-Given GET API Method to send request for "<url>"
+Given GET Method to send request for "<url>"
 Then Verify "<first_name>" in the response 
 Examples:
       | url                                | first_name |

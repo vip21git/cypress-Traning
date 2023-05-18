@@ -1,7 +1,7 @@
-import deleteApiPage from "../../pageObject/deleteApiPage" 
-import { Given, Then } from "cypress-cucumber-preprocessor/steps";
+import deleteApiPage from "../../pageObject/api/deleteApiPage" 
+import { Given,Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("DELETE Method API to Delete User",()=>{
+Given("DELETE Method to Delete User",()=>{
     deleteApiPage.deleteRequest()
 })
 

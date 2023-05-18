@@ -1,7 +1,7 @@
-import getApiPage from "../../pageObject/getApiPage";
-import { Given } from "cypress-cucumber-preprocessor/steps";
+import getApiPage from "../../pageObject/api/getApiPage"
+import { Given,Then } from "cypress-cucumber-preprocessor/steps";
 
-Given("GET API Method to send request for {string}", (url)=>{
+Given("GET Method to send request for {string}", (url)=>{
     getApiPage.getRequest(url)
 })
 

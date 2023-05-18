@@ -1,12 +1,12 @@
 export default{
     userName : 'input[name="username"]',
     userPassword : 'input[name="password"]',
-    loginbtn : 'button[type="submit"]',
-    dashBoardHeader : 'span[class="oxd-topbar-header-breadcrumb"]',
+    loginButton : 'button[type="submit"]',
+    dashboardHeader : 'span[class="oxd-topbar-header-breadcrumb"]',
     errorMessage : '.oxd-alert-content--error',
 
     navigateToUrl(){
-       cy.visit('/')
+       cy.visit(Cypress.config('baseUrl'))
     },
 
     enterUserDetails(userId, userPass){
@@ -14,12 +14,12 @@ export default{
         cy.get(this.userPassword).should('be.visible').type(userPass)
             },
 
-    clickLoginBtn(){
-        cy.get(this.loginbtn).should('be.visible').click()
+    clickOnLoginButton(){
+        cy.get(this.loginButton).should('be.visible').click()
     },
 
     verifySuccessfullLogin(){
-        cy.get(this.dashBoardHeader).should('have.text', 'Dashboard')
+        cy.get(this.dashboardHeader).should('have.text', 'Dashboard')
     },
 
     verifyUnsuccessfullLogin(){

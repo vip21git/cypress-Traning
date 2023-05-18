@@ -1,8 +1,8 @@
-Feature: PUT API Endpoint Functionality Scenarios
+Feature: PUT API Endpoint Functionality
 
 Scenario Outline: Verification for updating the user data
 
-Given PUT API Method to update user name
+Given PUT Method to update user name
 Then Verify "<name>" should be updated in the list
    
     Examples:
